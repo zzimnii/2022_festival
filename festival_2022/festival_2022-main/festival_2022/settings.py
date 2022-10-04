@@ -28,7 +28,7 @@ TIME_ZONE='Asia/Seoul'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['dwufestival2022.pythonanywhere.com']
 
 
 # Application definition
@@ -100,7 +100,7 @@ ROOT_URLCONF = 'festival_2022.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

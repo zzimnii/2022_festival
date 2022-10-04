@@ -7,6 +7,9 @@ from django.conf.urls.static import static
 from . import views
 from .views import PostViewSet, CommentView
 from rest_framework.urlpatterns import format_suffix_patterns
+from postapp.views import page_not_found
+
+handler404 = page_not_found
 
 product_router = SimpleRouter(trailing_slash=False)
 product_router.register('', PostViewSet, basename='post')
@@ -14,9 +17,6 @@ product_router.register('', PostViewSet, basename='post')
 
 post_router = SimpleRouter(trailing_slash=False)
 post_router.register('', PostViewSet, basename='post')
-
-
-
 
 urlpatterns = [
     path('', views.home),

@@ -40,3 +40,6 @@ class CommentView(APIView):
 
 def home(request):
     return render(request, "index.html")     
+
+def page_not_found(request, exception, template_name='index.html'):
+  return render(request, 'index.html', {})
